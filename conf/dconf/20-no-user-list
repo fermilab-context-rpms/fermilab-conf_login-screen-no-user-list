@@ -1,0 +1,4 @@
+### THIS FILE IS MANAGED BY fermilab-conf_login-screen-no-user-list-gdm ###
+###          YOUR CHANGES HERE WILL BE REVERTED BY THIS PACAKGE         ###
+[org/gnome/login-screen] 
+disable-user-list=true
