@@ -1,6 +1,6 @@
 Name:		fermilab-conf_login-screen-no-user-list
 Version:	1.0
-Release:	4%{?dist}
+Release:	4.1%{?dist}
 Summary:	Disable the login screen user list
 Group:		Fermilab
 License:	GPL
@@ -13,7 +13,7 @@ BuildRequires:	bash coreutils
 Requires:	system-release
 
 # Top level package should require software specific packages
-Requires:	%{name}-gdm == %{version}-%{release}
+Requires:	(%{name}-gdm == %{version}-%{release} if gdm)
 
 
 %description
@@ -77,6 +77,9 @@ dconf update
 %config %{_sysconfdir}/dconf/db/distro.d/locks/20-no-user-list
 
 %changelog
+* Wed Apr 13 2022 Pat Riehecky <riehecky@fnal.gov> - 1.0-4.1
+- Use rich boolean deps
+
 * Tue Feb 22 2022 Pat Riehecky <riehecky@fnal.gov> - 1.0-4
 - Use unified dconf options for EL7+
 
